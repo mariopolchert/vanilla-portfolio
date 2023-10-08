@@ -17,4 +17,4 @@ jobs:
                   server: ftp.mariopolchert.com
                   username: ${{ secrets.ftp_username }}
                   password: ${{ secrets.ftp_password }}
-                  server-dir: /home/mariopol/basic.mariopolchert.com/
+                  server-dir: /home/mariopol/subdomains_mariopolchert/basic.mariopolchert.com/
