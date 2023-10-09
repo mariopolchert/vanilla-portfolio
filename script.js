@@ -1,18 +1,9 @@
 const desktopMenu = document.querySelector("#desktopMenu");
 const mobileNav = document.querySelector("#mobileNav");
+const mobileMenu = document.querySelector("#mobileMenu");
 const mobileLinks = document.querySelectorAll(".mobileLinks");
 const divHam = document.querySelector("#divHam");
 const mobileLogoLink = document.querySelector("#mobileLogoLink");
-
-// window.onscroll = () => {
-//     scrollingMenu();
-// };
-
-// function scrollingMenu() {
-//     document.body.scrollTop > 80 || document.documentElement.scrollTop > 80
-//         ? desktopMenu.classList.add("reduced")
-//         : desktopMenu.classList.remove("reduced");
-// }
 
 // JavaScript logic to add the 'reduced' class on scroll
 window.addEventListener("scroll", function () {
@@ -26,11 +17,13 @@ window.addEventListener("scroll", function () {
 const handleClick = () => {
     divHam.classList.toggle("xsign");
     mobileNav.classList.toggle("active");
+    mobileMenu.classList.toggle("active");
 };
 
 mobileLogoLink.addEventListener("click", () => {
     divHam.classList.remove("xsign");
     mobileNav.classList.remove("active");
+    mobileMenu.classList.remove("active");
 });
 
 divHam.addEventListener("click", () => {
