@@ -665,6 +665,7 @@ body, html {
 .sections {
     width: 100vw;
     min-height: 100vh;
+    scroll-behavior: smooth;
 }
 section {
     min-height: 100vh;
