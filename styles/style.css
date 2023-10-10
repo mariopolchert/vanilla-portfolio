@@ -382,13 +382,14 @@ body, html {
     font-family: 'Ruda', Courier, monospace;
     scroll-behavior: smooth;
 }
-/* ******************************** DESKTOP ************************** */
+/* ******************************** DESKTOP + TABLET ************************** */
 
-/* @media screen and (min-width: 64em) or (orientation: landscape) { */
-@media screen and (orientation: landscape) {
+@media screen and (orientation: landscape),
+screen and (max-width: 64em) and (orientation: portrait) {
     #mobileMenu {
         display: none;
     }
+
     #mobileNav {
         display: none;
     }
@@ -411,6 +412,8 @@ body, html {
     #logo {
         width: 70px;
         height: 70px;
+        transition: all ease-in-out .3s;
+
     }
 
     #ulDesktop {
@@ -418,13 +421,17 @@ body, html {
         flex-direction: row;
         font-size: 1.5rem;
         font-weight: 700;
-        padding: 0 2rem;
+        padding: 0 3rem;
+        transition: all ease-in-out .3s;
+
     }
 
     #ulDesktop li {
         list-style: none;
+        transition: all ease-in-out .3s;
+
     }
-    
+
     #ulDesktop li a {
         color: whitesmoke;
         padding: 1rem;
@@ -438,121 +445,34 @@ body, html {
         background-color: rgba(0, 0, 0, 0.7);
         transition: 0.4s;
     }
-        
+
     #desktopMenu.reduced ul {
         display: flex;
         list-style: none;
     }
-    
+
     #desktopMenu.reduced ul li {
         display: flex;
         align-items: center;
         padding: 0;
         cursor: pointer;
         font-weight: 700;
-        font-size: 1rem;    
+        font-size: 1rem;
     }
-    
+
     #desktopMenu.reduced ul li a {
         text-decoration: none;
         color: whitesmoke;
     }
-    
+
     #desktopMenu.reduced a img {
         height: 50px;
         width: 50px;
         border: 2px solid #39ff14;
         border-radius: 5px;
     }
-
-
 }
-  
-/* 
-******************************** TABLET **************************
-*/
 
-@media screen and (max-width: 64em) and (orientation: portrait) {
-    #mobileMenu {
-        display: none;
-    }
-    #mobileNav {
-        display: none;
-    }
-
-    #desktopMenu {
-        display: flex;
-        position: fixed;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        height: 10vh;
-        min-width: calc(100vw - 3%);
-        max-width: 1280px;
-        z-index: 10;
-        padding: 1rem;
-        background-color: transparent;
-        transition: all ease-in-out .4s;
-    }
-
-    #logo {
-        width: 70px;
-        height: 70px;
-    }
-
-    #ulDesktop {
-        display: flex;
-        flex-direction: row;
-        font-size: 1.5rem;
-        font-weight: 700;
-        padding: 0 2rem;
-    }
-
-    #ulDesktop li {
-        list-style: none;
-    }
-    
-    #ulDesktop li a {
-        color: whitesmoke;
-        padding: 1rem;
-        text-decoration: none;
-    }
-
-    /* desktopMenu reduced */
-
-    #desktopMenu.reduced {
-        height: 7vh;
-        background-color: rgba(0, 0, 0, 0.7);
-        transition: all ease-in-out .4s;
-    }
-        
-    #desktopMenu.reduced ul {
-        display: flex;
-        list-style: none;
-    }
-    
-    #desktopMenu.reduced ul li {
-        display: flex;
-        align-items: center;
-        padding: 0;
-        cursor: pointer;
-        font-weight: 700;
-        font-size: 1rem;    
-    }
-    
-    #desktopMenu.reduced ul li a {
-        text-decoration: none;
-        color: whitesmoke;
-    }
-    
-    #desktopMenu.reduced a img {
-        height: 50px;
-        width: 50px;
-        border: 2px solid #39ff14;
-        border-radius: 5px;
-    }
-
-}
 /* ******************************** PHONE ************************** */
 
 @media screen and (max-width: 40em) and (orientation: portrait) {
