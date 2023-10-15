@@ -376,7 +376,7 @@ template {
     display: none;
 }
 
-/* ******************************** CSS START ************************** */
+/* ******************************** CSS START ************************************************************ */
 
 body, html {
     font-family: 'Ruda', Courier, monospace;
@@ -483,7 +483,7 @@ screen and (max-width: 64em) and (orientation: portrait) {
         display: flex;
         flex-direction: column;
     }
-    
+
     #mobileMenu {
         display: flex;
         position: fixed;
@@ -525,7 +525,7 @@ screen and (max-width: 64em) and (orientation: portrait) {
         width: 40px;
         height: 5px;
         margin: auto;
-        border-radius: 25px;        
+        border-radius: 25px;
         background-color: #39ff14;
         transition: all ease-in-out .2s;
     }
@@ -543,11 +543,11 @@ screen and (max-width: 64em) and (orientation: portrait) {
     #mobileNav {
         display: flex;
         position: fixed;
-        flex-direction: column; 
-        align-items: center; 
+        flex-direction: column;
+        align-items: center;
         justify-content: center;
-        list-style: none; 
-        padding: 1rem 0; 
+        list-style: none;
+        padding: 1rem 0;
         width: 100vw;
         height: 100%;
         z-index: 8;
@@ -555,20 +555,20 @@ screen and (max-width: 64em) and (orientation: portrait) {
         margin-top: -1000px; /* menu removed from screen */
         transition: all ease-in-out .3s;
     }
-    
+
     #mobileNav.active {
         margin-top: 0;
         background-color: #222;
         transition: all ease-in-out .8s;
     }
-        
+
     #mobileNav li {
         display: flex;
         flex-direction: column;
-        padding: 1.5rem; 
+        padding: 1.5rem;
         font-size: 1.5em;
         font-weight: 700;
-        
+
     }
 
     #mobileNav li a {
@@ -579,7 +579,77 @@ screen and (max-width: 64em) and (orientation: portrait) {
 
 }
 
+/* *********************** SOCIAL ******************************** */
+/* nav */
+
+
+.socialNav {
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    background-color: transparent;
+    top: 40vh;
+    border-radius: 0 15px 15px 0;
+    margin-left: -8.5rem;
+    z-index: 20;
+}
+
+.socialUl {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-around;
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+.socialLi {
+    display: block;
+    padding: .5rem 1rem .5rem 1.5rem;
+    border-right: 3px solid #39ff14;
+    transition: all ease-in-out .4s;
+}
+
+.socialLi:first-child {
+    border-top: 2px solid #39ff14;
+    border-radius: 0 15px 0 0;
+}
+
+.socialLi:last-child {
+    border-bottom: 2px solid #39ff14;
+    border-radius: 0 0 15px 0;
+}
+
+.socialLi:hover {
+    transform: translateX(8.5rem);
+
+}
+
+.socialA {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 10rem;
+    text-decoration: none;
+    color: navajowhite;
+}
+
+
+.socialSpan {
+    font-size: 1.5rem;
+    color: #39ff14;
+}
+
+.socialImg{
+    width: 30px;
+    height: 30px;
+} 
+
+
+
 /* ******************************************************* */
+
 .sections {
     width: 100vw;
     min-height: 100vh;
@@ -594,7 +664,7 @@ section {
 }
 
 #home {
-    background-color: green;
+    background-color: #222;
     /* height: 100vh; */
 
 }
@@ -614,3 +684,4 @@ section {
 #contact {
     background-color: darkcyan;
 }
+

@@ -4,6 +4,7 @@ const mobileMenu = document.querySelector("#mobileMenu");
 const mobileLinks = document.querySelectorAll(".mobileLinks");
 const divHam = document.querySelector("#divHam");
 const mobileLogoLink = document.querySelector("#mobileLogoLink");
+const socialLi = document.querySelector(".socialLi");
 
 // JavaScript logic to add the 'reduced' class on scroll
 window.addEventListener("scroll", function () {
@@ -35,3 +36,5 @@ mobileLinks.forEach((n) => {
         handleClick();
     });
 });
+
+
