@@ -28,7 +28,7 @@
             <ul id="ulDesktop">
                 <li><a href="#home">HOME</a></li>
                 <li><a href="#about">ABOUT</a></li>
-                <li><a href="#tools">TOOLS</a></li>
+                <li><a href="#services">SERVICES</a></li>
                 <li><a href="#work">WORK</a></li>
                 <li><a href="#contact">CONTACT</a></li>
             </ul>
@@ -56,16 +56,16 @@
         <ul id="mobileNav" class="">
             <!-- remove -->
             <li>
-                <a class="mobileLinks" data-scroll-to="home">HOME</a>
+                <a class="mobileLinks" href="#home">HOME</a>
             </li>
             <li>
-                <a class="mobileLinks" data-scroll-to="about">ABOUT</a>
+                <a class="mobileLinks" href="#about">ABOUT</a>
             </li>
             <li>
-                <a class="mobileLinks" data-scroll-to="tools">TOOLS</a>
+                <a class="mobileLinks" href="#services">SERVICES</a>
             </li>
             <li>
-                <a class="mobileLinks" data-scroll-to="work">WORK</a>
+                <a class="mobileLinks" href="#work">WORK</a>
             </li>
             <li>
                 <a class="mobileLinks" href="#contact">CONTACT</a>
@@ -74,7 +74,7 @@
         <!-- End mobileNavigation -->
 
         <!-- Social menu -->
-        <nav class="socialNav">
+        <nav id="socialNav" class="socialNav">
             <!--  -->
             <ul class="socialUl">
                 <li id="linkedin" class="socialLi">
@@ -125,9 +125,74 @@
         <!-- End of Social menu -->
 
         <div class="sections" id="sections">
-            <section id="home"><h1>HOME</h1></section>
-            <section id="about"><h1>ABOUT</h1></section>
-            <section id="tools"><h1>TOOLS</h1></section>
+            <section id="home">
+                <article>
+                    <h1>Welcome</h1>
+                    <h1>My name is <span>Mario Polchert</span></h1>
+                    <h1>This is my Website, have a look around</h1>
+                    <a href="#contact">
+                        <button>OR GET IN TOUCH RIGHT NOW</button>
+                    </a>
+                </article>
+            </section>
+            <section id="about">
+                <article>
+                    <h1>ABOUT</h1>
+                    <h2>Hi...I'm Mario, it's good to have you here.</h2>
+                    <h2>
+                        Have a look around. I'm a passionate web developer
+                        dedicated to delivering high-quality work.
+                    </h2>
+                    <h2>
+                        I have a solid foundation in web technologies, and I'm
+                        continuously learning to provide optimal solutions.
+                    </h2>
+                    <h2>
+                        Collaboration and communication are essential to
+                        success, and as a quick learner and team player, I bring
+                        those skills to every project.
+                    </h2>
+                    <h2>
+                        Offering website design, development, and maintenance
+                        services. Let's create something exceptional together!
+                    </h2>
+                </article>
+            </section>
+            <section id="services">
+                <h1>SERVICES</h1>
+                <div class="cardContainer">
+                    <div class="card basic">
+                        <h1>BASIC</h1>
+                        <h2>Essential Web Package</h2>
+                        <p>
+                            This package includes the essential services to get
+                            a website up and running. It's perfect for clients
+                            who need a simple, cost-effective solution.
+                        </p>
+                    </div>
+                    <div class="card standard">
+                        <h1>STANDARD</h1>
+                        <h2>Professional Web Development</h2>
+                        <p>
+                            This service includes a comprehensive package that
+                            covers web design, development, and additional
+                            features. It's suitable for businesses and
+                            individuals looking for a well-rounded online
+                            presence.
+                        </p>
+                    </div>
+                    <div class="card premium">
+                        <h1>PREMIUM</h1>
+                        <h2>Bespoke Web Solutions</h2>
+                        <p>
+                            This is a fully customized and high-end service that
+                            caters to clients with unique and complex
+                            requirements. It offers a tailored approach to web
+                            development and design.
+                        </p>
+                    </div>
+                </div>
+            </section>
             <section id="work"><h1>WORK</h1></section>
             <section id="contact"><h1>CONTACT</h1></section>
         </div>

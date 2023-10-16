@@ -5,12 +5,13 @@ const mobileLinks = document.querySelectorAll(".mobileLinks");
 const divHam = document.querySelector("#divHam");
 const mobileLogoLink = document.querySelector("#mobileLogoLink");
 
-// JavaScript logic to remove id at the end of url
+// JavaScript logic hack to remove id at the end of url
 window.addEventListener(
     "hashchange",
     () => window.history.pushState({}, "", "/"),
     {}
 );
+
 // JavaScript logic to add the 'reduced' class on scroll
 window.addEventListener("scroll", function () {
     if (window.scrollY > 50) {
