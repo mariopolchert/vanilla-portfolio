@@ -4,6 +4,10 @@ const mobileMenu = document.querySelector("#mobileMenu");
 const mobileLinks = document.querySelectorAll(".mobileLinks");
 const divHam = document.querySelector("#divHam");
 const mobileLogoLink = document.querySelector("#mobileLogoLink");
+//carousel
+const prev = document.querySelector(".prev-button");
+const next = document.querySelector(".next-button");
+const slides = document.querySelectorAll(".carousel-slide");
 
 // JavaScript logic hack to remove id at the end of url
 window.addEventListener(
@@ -41,4 +45,19 @@ mobileLinks.forEach((n) => {
     n.addEventListener("click", () => {
         handleClick();
     });
+});
+
+//carousel
+const slidesContainer = document.querySelector("#slides-container");
+const slide = document.querySelector(".slide");
+const prevButton = document.querySelector("#slide-arrow-prev");
+const nextButton = document.querySelector("#slide-arrow-next");
+const slideWidth = slide.clientWidth / 3;
+
+nextButton.addEventListener("click", (e) => {
+    slidesContainer.scrollLeft += slideWidth;
+});
+
+prevButton.addEventListener("click", (e) => {
+    slidesContainer.scrollLeft -= slideWidth;
 });
