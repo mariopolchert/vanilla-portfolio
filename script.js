@@ -50,14 +50,15 @@ mobileLinks.forEach((n) => {
 //carousel
 const slidesContainer = document.querySelector("#slides-container");
 const slide = document.querySelector(".slide");
-const prevButton = document.querySelector("#slide-arrow-prev");
-const nextButton = document.querySelector("#slide-arrow-next");
-const slideWidth = slide.clientWidth / 3;
+const prevSpan = document.querySelector("#span-prev");
+const nextSpan = document.querySelector("#span-next");
 
-nextButton.addEventListener("click", (e) => {
+nextSpan.addEventListener("click", () => {
+    const slideWidth = slide.clientWidth;
     slidesContainer.scrollLeft += slideWidth;
 });
 
-prevButton.addEventListener("click", (e) => {
+prevSpan.addEventListener("click", () => {
+    const slideWidth = slide.clientWidth;
     slidesContainer.scrollLeft -= slideWidth;
 });
