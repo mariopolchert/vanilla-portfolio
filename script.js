@@ -4,10 +4,6 @@ const mobileMenu = document.querySelector("#mobileMenu");
 const mobileLinks = document.querySelectorAll(".mobileLinks");
 const divHam = document.querySelector("#divHam");
 const mobileLogoLink = document.querySelector("#mobileLogoLink");
-//carousel
-const prev = document.querySelector(".prev-button");
-const next = document.querySelector(".next-button");
-const slides = document.querySelectorAll(".carousel-slide");
 
 // JavaScript logic hack to remove id at the end of url
 window.addEventListener(
@@ -48,17 +44,36 @@ mobileLinks.forEach((n) => {
 });
 
 //carousel
-const slidesContainer = document.querySelector("#slides-container");
-const slide = document.querySelector(".slide");
-const prevSpan = document.querySelector("#span-prev");
-const nextSpan = document.querySelector("#span-next");
+const prev = document.querySelector(".prev");
+const next = document.querySelector(".next");
+const mySlides = document.querySelectorAll(".mySlides");
+const dots = document.querySelectorAll(".dot");
+const dot = document.querySelector(".dot");
 
-nextSpan.addEventListener("click", () => {
-    const slideWidth = slide.clientWidth;
-    slidesContainer.scrollLeft += slideWidth;
+let currentIndex = 0;
+
+function showSlide(index) {
+    mySlides.forEach((slide) => slide.classList.remove("active"));
+    dots.forEach((dot) => dot.classList.remove("active"));
+    mySlides[index].classList.add("active");
+    dots[index].classList.add("active");
+}
+
+dots.forEach((dot, i) =>
+    dot.addEventListener("click", () => {
+        showSlide(i);
+        currentIndex = i;
+    })
+);
+
+prev.addEventListener("click", () => {
+    currentIndex = (currentIndex - 1) % mySlides.length;
+    showSlide(currentIndex);
 });
 
-prevSpan.addEventListener("click", () => {
-    const slideWidth = slide.clientWidth;
-    slidesContainer.scrollLeft -= slideWidth;
+next.addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % mySlides.length;
+    showSlide(currentIndex);
 });
+
+showSlide(currentIndex);
