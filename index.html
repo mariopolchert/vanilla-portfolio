@@ -228,7 +228,44 @@
                 </div>
                 <br />
             </section>
-            <section id="contact"><h1>CONTACT</h1></section>
+            <!--                          CONTACT                                    -->
+            <section id="contact">
+                <h1>CONTACT</h1>
+                <!--   CONTACT - CONTAINER   -->
+                <div class="formContainer">
+                    <form action="/action_page.php">
+                        <div class="formElement">
+                            <label for="email">Email</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="Your best email..."
+                            />
+                        </div>
+                        <div class="formElement">
+                            <label for="subject">Subject</label>
+                            <input
+                                type="text"
+                                id="subject"
+                                name="subject"
+                                placeholder="Subject of your message..."
+                            />
+                        </div>
+                        <div class="formElement">
+                            <label for="message">Your message</label>
+                            <textarea
+                                id="message"
+                                name="message"
+                                placeholder="Tell me what needs to be done..."
+                            ></textarea>
+                        </div>
+                        <div class="submitBtn">
+                            <input type="submit" value="Submit" />
+                        </div>
+                    </form>
+                </div>
+            </section>
         </div>
     </body>
 </html>
