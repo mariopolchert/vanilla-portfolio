@@ -131,7 +131,7 @@
                     <h1>My name is <span>Mario</span></h1>
                     <h1>This is my Website, have a look around</h1>
                     <a href="#contact">
-                        <button>OR GET IN TOUCH RIGHT NOW</button>
+                        <button>CONTACT ME</button>
                     </a>
                 </article>
             </section>
@@ -234,34 +234,38 @@
                 <!--   CONTACT - CONTAINER   -->
                 <div class="formContainer">
                     <form action="/action_page.php">
-                        <div class="formElement">
+                        <div class="form-group">
                             <label for="email">Email</label>
                             <input
                                 type="email"
                                 id="email"
                                 name="email"
                                 placeholder="Your best email..."
+                                required
                             />
                         </div>
-                        <div class="formElement">
+                        <div class="form-group">
                             <label for="subject">Subject</label>
                             <input
                                 type="text"
                                 id="subject"
                                 name="subject"
                                 placeholder="Subject of your message..."
+                                required
                             />
                         </div>
-                        <div class="formElement">
+                        <div class="form-group">
                             <label for="message">Your message</label>
                             <textarea
                                 id="message"
                                 name="message"
                                 placeholder="Tell me what needs to be done..."
+                                rows="5"
+                                required
                             ></textarea>
                         </div>
-                        <div class="submitBtn">
-                            <input type="submit" value="Submit" />
+                        <div class="form-group">
+                            <input class="submitBtn" type="submit" value="Submit" />
                         </div>
                     </form>
                 </div>

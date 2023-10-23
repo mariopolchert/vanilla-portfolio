@@ -713,67 +713,27 @@ section {
 
 /* **************************** HOME *************************** */
 
-/* #home {
+
+#home {
     background-color: var(--dark);
-} */
-
-/* #home button {
-    padding: 1rem 1.2rem;
-    border: 3px solid var(--accent);
-    color: navajowhite;
-    border-radius: 5px;
-    background-color: transparent;
-    font-weight: bold;
-    font-size: 1.5rem;
-} */
-
-/* #home button:hover {
-    transition: all ease-in-out .4s;
-    background-color: navajowhite;
-    color:var(--dark);
-    font-weight: bolder;
-    border: 3px solid var(--accent);
-} */
+}
 
 #home button {
-    min-width: 130px;
-    height: 40px;
-    color: #fff;
-    padding: 5px 10px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
+    padding: .7rem 2rem;
+    background-color: transparent;
+    border: 3px solid var(--accent);
+    border-radius: 5px;
+    color: navajowhite;
+    z-index: 0;
     position: relative;
-    display: inline-block;
-    outline: none;
-    border-radius: 5px;
-    border: none;
-    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5), 7px 7px 20px 0px rgba(0, 0, 0, .1), 4px 4px 5px 0px rgba(0, 0, 0, .1);
-    background: #57cc99;
-    z-index: 1;
+    transition: all ease-in-out .4s;
+    font-weight: 900;
 }
 
-#home button:hover:after {
-    width: 100%;
-    left: 0;
-}
-
-#home button:after {
-    border-radius: 5px;
-    position: absolute;
-    content: "";
-    width: 0;
-    height: 100%;
-    top: 0;
-    z-index: -1;
-    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5), 7px 7px 20px 0px rgba(0, 0, 0, .1), 4px 4px 5px 0px rgba(0, 0, 0, .1);
-    transition: all 0.3s ease;
-    background-color: #80ed99;
-    right: 0;
-}
-
-#home button:active {
-    top: 2px;
+#home button:hover {
+    background-color: var(--accent);
+    color: #222222;
+    font-weight: 900;
 }
 
 /* **************************** ABOUT *************************** */
@@ -797,15 +757,6 @@ section {
 }
 
 /**************** SERVICES *************************************/
-
-/* #services {
-    background-color: var(--dark);
-    display: flex;
-    flex-direction: column;
-    justify-content:   space-evenly;
-    align-items: center;
-
-} */
 
 #services h1 {
 }
@@ -949,42 +900,66 @@ section {
     margin: 0 auto;
 }
 
-.formContainer {
-    width: fit-content;
-    height: fit-content;
-}
-
-.formContainer form {
-    display: flex;
-    flex-direction: column;
-    background-color: #blue;
-    width: 50vw;
-}
-
-#contact h1 {
-    padding-bottom: 2rem;
-}
-
-.formElement {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: stretch; 
-}
-
-.formElement label {
-    padding: 1rem 0 .3rem 0;
-}
-
-.formElement input, .formElement textarea {
-    height: 3rem;
+#formContainer {
+    margin: 0 auto;
     border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40vw;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    
+}
+
+.form-group label {
+    display: inline-block;
+    font-weight: bold;
+    padding-bottom: .5rem;
+}
+
+input[type="email"],
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+textarea {
+    resize: none;
 }
 
 .submitBtn {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    padding: 1rem 0;
+    font-weight: 900;
+    width: auto;
+    padding: .7rem 2rem;
+    background-color: transparent;
+    color: navajowhite;
+    border: 3px solid var(--accent);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all ease-in-out .4s;
+    margin-right: 0;
+    position: relative;
+
 }
+
+.submitBtn:hover {
+    
+    background-color: var(--accent);
+    color: #222222;
+}
+
+
+
+
 
