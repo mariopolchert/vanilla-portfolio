@@ -11,7 +11,10 @@ html {
     box-sizing: border-box;
     font-family: 'Ruda', Courier, monospace;
     scroll-behavior: smooth;
-    overflow-x: hidden;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+
     /* COLORS */
     --accent: #39ff14;
     /* --accent: #E31221; */
@@ -59,6 +62,7 @@ html {
 
 @media screen and (orientation: landscape),
 screen and (max-width: 64em) and (orientation: portrait) {
+
     #mobileMenu {
         display: none;
     }
@@ -82,8 +86,10 @@ screen and (max-width: 64em) and (orientation: portrait) {
     }
 
     #logo {
-        width: 70px;
-        height: 70px;
+        width: 80px;
+        height: 80px;
+        padding: 0;
+        margin: 0;
         transition: all ease-in-out .3s;
 
     }
@@ -144,10 +150,7 @@ screen and (max-width: 64em) and (orientation: portrait) {
         border-radius: 5px;
     }
 
-
-
 }
-
 
 /* ******************************** PHONE ************************** */
 
@@ -164,6 +167,18 @@ screen and (max-width: 64em) and (orientation: portrait) {
     html {
         display: flex;
         flex-direction: column;
+    }
+
+    #home-article {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        margin: 0 auto;
+        padding: 0 30px;
+        text-align: center;
+
+
     }
 
     #mobileMenu {
@@ -192,7 +207,16 @@ screen and (max-width: 64em) and (orientation: portrait) {
         z-index: 11;
     }
 
-    /* Hamburger div container */
+    #home article h1 {
+        font-size: 3rem;
+        margin: 1.5rem auto;
+    }
+
+    #link-contact {
+        margin-top: 3rem;
+    }
+
+      /* Hamburger div container */
     #divHam {
         display: flex;
         flex-direction: column;
@@ -396,9 +420,9 @@ section {
 }
 
 #home h1 span {
-    position: relative;
-    text-decoration: none;
     display: inline-block;
+    position: absolute;
+    text-decoration: none;
     transition: all ease-in-out 350ms;
 }
 
@@ -419,7 +443,8 @@ section {
 }
 
 .name-dot {
-    display: inline;
+    display: inline-block;
+    position: absolute;
     color: var(--accent);
 }
 
@@ -551,6 +576,7 @@ section {
     color: var(--navajo);
     border: none;
     border-radius: 5px;
+    padding: .7rem .6rem .9rem .6rem;
     z-index: 0;
     cursor: pointer;
     transition: all ease-in-out .4s;
